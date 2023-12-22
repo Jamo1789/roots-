@@ -1,0 +1,24 @@
+       <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <?php
+            $menu_items = wp_get_nav_menu_items('header-menu'); // Replace 'header-menu' with your menu location.
+
+            if ($menu_items) {
+              echo '<ul class="navbar-nav">';
+
+              foreach ($menu_items as $menu_item) {
+                echo '<li class="nav-item"><a class="nav-link" href="' . esc_url($menu_item->url) . '">' . esc_html($menu_item->title) . '</a></li>';
+              }
+
+              echo '<li class="nav-item">';
+              echo '<li class="nav-item d-flex align-items-center">';
+              echo '<img src="' . esc_url(get_theme_file_uri('walkietalkie.svg')) . '" alt="Walkie Talkie" width="20" height="20" class="mr-2">';
+              echo '<a class="nav-link">it-tuki</a>';
+              echo '</li>';
+
+              echo '</ul>';
+            } else {
+              // Handle the case when no menu items are found.
+              echo '<p>No menu items found.</p>';
+            }
+            ?>
+          </div>

@@ -1,0 +1,16 @@
+/*
+Theme Name: Custom_theme
+Author: Jarmo Lääkkö  
+*/
+#custom-header {
+    background-color: #333;
+    padding: 20px;
+    display: inline;
+    color: yellow;
+}
+/* Add margin-right to navigation menu links */
+.navbar-nav > li > a {
+    margin-right: 40px !important;
+}
+
+
